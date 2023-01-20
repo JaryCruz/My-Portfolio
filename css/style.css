@@ -358,7 +358,7 @@ form button:hover {
 
   form {
     flex-direction: column;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     gap: 40px;
@@ -366,6 +366,10 @@ form button:hover {
 
   form p {
     width: 100%;
+  }
+
+  .contact-info h2 {
+    font-size: 45px;
   }
 
 }
@@ -378,6 +382,10 @@ form button:hover {
 
   h2 {
     font-size: 30px;
+  }
+
+  .contact-info h2 {
+    font-size: 35px;
   }
 
   header .container {
