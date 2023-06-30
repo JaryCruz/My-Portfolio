@@ -415,8 +415,17 @@ form button:hover {
 
 /* Smartphones */
 @media (max-width: 810px) {
+  nav .container {
+    margin: 25px auto;
+  }
+
+  .social-links i {
+    font-size: 30px;
+  }
+
   h1 {
     font-size: 35px;
+    margin-top: 20px;
   }
 
   h2 {
@@ -429,7 +438,7 @@ form button:hover {
 
   header .container {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     text-align: center;
   }
 
@@ -486,12 +495,28 @@ form button:hover {
 
 /* Small smartphones */
 @media (max-width: 450px) {
+  .logo {
+    font-size: 25px;
+  }
+
+  .social-links i {
+    font-size: 25px;
+  }
+
   .project-img .project-links {
     top: 140%;
   }
 
   header p {
     margin: 20px auto;
+  }
+
+  header img {
+    width: 75%;
+  }
+
+  header .container {
+    gap: 0px;
   }
 
   .section-title h2 {
