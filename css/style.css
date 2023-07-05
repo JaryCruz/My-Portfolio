@@ -137,7 +137,7 @@ header p {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 25px;
   margin: 100px 0;
   width: 100%;
   border-top: 1px solid var(--text1);
