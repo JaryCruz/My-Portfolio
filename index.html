@@ -14,6 +14,7 @@
     <title>Jary Cruz</title>
     <link rel="icon" href="images/black.png" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -27,19 +28,18 @@
     <nav>
       <div class="container">
         <p class="logo">jarycruz</p>
-        <div class="social-links">
-          <a href="https://github.com/JaryCruz" target="_blank"
-            ><i class="fa-brands fa-github fa-2x"></i
-          ></a>
-          <a href="https://twitter.com/JaryyCruz" target="_blank"
-            ><i class="fa-brands fa-twitter fa-2x"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/jary-cruz-732079261/"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin fa-2x"></i
-          ></a>
-        </div>
+        <ul data-menu>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact" class="btn-link" >Contact Me</a></li>
+        </ul>
+
+        <button class="btn-menu" data-btn-menu>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
 
@@ -47,12 +47,12 @@
     <header>
       <div class="container">
         <img src="images/jary.jpeg" alt="" />
-        <div class="welcome-text">
+        <div>
           <h1><span>Professional</span> Web Developer</h1>
           <p>
-            More than 3 years of experience helping businesses fuel their growth.
+            Focus on running your business while I focus on growing it.
           </p>
-          <a href="#contact" class="underline">Contact Me</a>
+          <a href="#contact" class="btn-link">Contact Me</a>
         </div>
       </div>
     </header>
@@ -61,39 +61,42 @@
     <main>
       <div class="container">
         <!-- Skills Section -->
-        <section>
+        <section id="skills">
+          <div class="skills-title">
+            <h2>Skills</h2>
+          </div>
           <div class="skills">
             <div class="skill">
-              <h2>HTML</h2>
+              <h3>HTML</h3>
             </div>
 
             <div class="skill">
-              <h2>CSS</h2>
+              <h3>CSS</h3>
             </div>
 
             <div class="skill">
-              <h2>JavaScript</h2>
+              <h3>JavaScript</h3>
             </div>
 
             <div class="skill">
-              <h2>React</h2>
+              <h3>React</h3>
             </div>
 
             <div class="skill">
-              <h2>Bootstrap</h2>
+              <h3>Sass</h3>
             </div>
 
             <div class="skill">
-              <h2>Sass</h2>
+              <h3>Bootstrap</h3>
             </div>
           </div>
         </section>
 
         <!-- Projects Section -->
-        <section>
+        <section id="projects">
           <div class="section-title">
             <h2>Projects</h2>
-            <a href="#contact" class="underline">Contact Me</a>
+            <a href="#contact" class="btn-link">Contact Me</a>
           </div>
           <div class="projects">
             <div class="project">
@@ -102,13 +105,13 @@
                 <div class="project-links">
                   <a
                     href="https://liliankitchen.com/"
-                    class="underline"
+                    class="btn-link"
                     target="_blank"
                     >View Project</a
                   >
                   <a
                     href="https://github.com/JaryCruz/Lilian-s-Website"
-                    class="underline"
+                    class="btn-link"
                     target="_blank"
                     >View Code</a
                   >
@@ -128,13 +131,13 @@
                 <div class="project-links">
                   <a
                     href="https://url-jc.netlify.app/"
-                    class="underline"
+                    class="btn-link"
                     target="_blank"
                     >View Project</a
                   >
                   <a
                     href="https://github.com/JaryCruz/Url-Shortening"
-                    class="underline"
+                    class="btn-link"
                     target="_blank"
                     >View Code</a
                   >
@@ -154,13 +157,13 @@
                 <div class="project-links">
                   <a
                     href="https://smartspend-jc.netlify.app/"
-                    class="underline"
+                    class="btn-link"
                     target="_blank"
                     >View Project</a
                   >
                   <a
                     href="https://github.com/JaryCruz/SmartSpend-App"
-                    class="underline"
+                    class="btn-link"
                     target="_blank"
                     >View Code</a
                   >
@@ -179,13 +182,13 @@
                 <div class="project-links">
                   <a
                     href="https://countries-jc.netlify.app/"
-                    class="underline"
+                    class="btn-link"
                     target="_blank"
                     >View Project</a
                   >
                   <a
                     href="https://github.com/JaryCruz/Countries-Rest"
-                    class="underline"
+                    class="btn-link"
                     target="_blank"
                     >View Code</a
                   >
@@ -193,18 +196,18 @@
               </div>
               <h3>Countries Rest API</h3>
               <div class="tech-used">
-                <h4>CSS</h4>
                 <h4>React</h4>
+                <h4>CSS</h4>
               </div>
             </div>
           </div>
         </section>
 
         <!-- Testimonial Section -->
-        <section>
+        <section id="testimonials">
           <div class="section-title">
             <h2>Testimonials</h2>
-            <a href="#contact" class="underline">Contact Me</a>
+            <a href="#contact" class="btn-link">Contact Me</a>
           </div>
           <div class="testimonials">
             <div class="testimonial-card">
@@ -260,7 +263,7 @@
               <input
                 id="name"
                 type="text"
-                placeholder="NAME"
+                placeholder="Name"
                 name="name"
                 autocomplete="off"
                 required
@@ -268,7 +271,7 @@
               <input
                 id="email"
                 type="email"
-                placeholder="EMAIL"
+                placeholder="Email"
                 name="email"
                 autocomplete="off"
                 required
@@ -278,10 +281,10 @@
                 name="message"
                 cols="30"
                 rows="5"
-                placeholder="MESSAGE"
+                placeholder="Message"
                 required
               ></textarea>
-              <button type="submit" value="Send Message" class="underline">
+              <button type="submit" value="Send Message">
                 Send Message
               </button>
             </div>
