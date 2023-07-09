@@ -692,7 +692,11 @@ form button:hover {
   }
 
   .project-img .project-links {
-    top: 137%;
+    top: 135%;
+  }
+
+  .project-links a {
+    padding: 8px 10px;
   }
 
   header p {
