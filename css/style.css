@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
 
 :root {
-  --bg-body: hsl(0, 0%, 8%);
-  --bg-body2: hsl(0, 0%, 14%);
+  --black: hsl(0, 0%, 8%);
+  --black-light: hsl(0, 0%, 14%);
   --accent: hsl(180, 66%, 49%);
-  --text1: hsl(0, 0%, 100%);
-  --text2: hsl(0, 0%, 75%);
+  --white: hsl(0, 0%, 100%);
+  --white-dark: hsl(0, 0%, 75%);
 }
 
 *,
@@ -18,13 +18,13 @@
 
 body {
   font-family: 'Manrope', sans-serif;
-  background-color: var(--bg-body);
+  background-color: var(--black);
 }
 
 h1 {
   font-size: 60px;
-  color: var(--text1);
-  margin: 70px 0 20px 0;
+  color: var(--white);
+  margin-top: 70px;
   line-height: 1.3;
 }
 
@@ -33,32 +33,32 @@ h1 span {
 }
 
 h2 {
-  color: var(--text1);
-  font-size: 45px;
+  color: var(--white);
+  font-size: 50px;
   margin-bottom: 5px;
 }
 
 h3 {
-  color: var(--text1);
+  color: var(--white);
   font-size: 33px;
   margin: 5px 0;
 }
 
 h4 {
-  color: var(--text2);
+  color: var(--white-dark);
   display: inline-block;
   margin-right: 10px;
   font-size: 16px;
 }
 
 p {
-  color: var(--text2);
+  color: var(--white-dark);
   line-height: 1.6;
   font-size: 17px;
 }
 
 a {
-  color: var(--text1);
+  color: var(--white);
   text-decoration: none;
   letter-spacing: 1px;
 }
@@ -72,7 +72,7 @@ a {
 
 .btn-link {
   padding: 10px 25px;
-  color: var(--bg-body);
+  color: var(--black);
   background-color: var(--accent);
   border-radius: 4px;
   font-weight: 600;
@@ -81,33 +81,16 @@ a {
 }
 
 .btn-link:hover,
-a.btn-link:hover {
+a.btn-link:hover,
+button.btn-link:hover {
   opacity: 0.8;
-  color: var(--bg-body);
+  color: var(--black);
 }
 
 .logo {
-  color: var(--text1);
+  color: var(--white);
   font-size: 30px;
   font-weight: 700;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.social-links i {
-  color: var(--text1);
-  transition: all 300ms ease-in-out;
-}
-
-.social-links i:hover {
-  opacity: 0.8;
-  scale: 0.9;
-  color: var(--accent);
 }
 
 /* Navbar */
@@ -142,13 +125,12 @@ nav .container {
 .btn-menu span {
   width: 100%;
   height: 3px;
-  background-color: var(--text1);
+  background-color: var(--white);
 }
 
 nav ul {
   display: flex;
-  align-items: center;
-  justify-content: end;
+  list-style-type: none;
   gap: 25px;
 }
 
@@ -161,6 +143,10 @@ ul li a:hover {
 }
 
 /* Header */
+header {
+  overflow-x: hidden;
+}
+
 header .container {
   display: flex;
   flex-direction: row-reverse;
@@ -182,9 +168,17 @@ header img {
   left: -27%;
 }
 
+.circle-pattern {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url(../images/pattern-circle.svg) no-repeat center center / cover;
+  right: 36%;
+  bottom: 13%;
+}
+
 header p {
-  margin-bottom: 35px;
-  width: 80%;
+  margin: 20px 0 35px 0;
 }
 
 /* Skills Section */
@@ -194,9 +188,9 @@ header p {
   align-items: center;
   gap: 20px;
   width: 100%;
-  padding-top: 60px;
-  margin-bottom: 60px;
-  border-top: 1px solid var(--text2);
+  padding-top: 20px;
+  margin-bottom: 40px;
+  border-top: 1px solid var(--white-dark);
 }
 
 /* Projects Section */
@@ -204,7 +198,7 @@ header p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0px;
 }
 
 .projects {
@@ -212,7 +206,6 @@ header p {
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   width: 100%;
-  padding-bottom: 20px;
 }
 
 .project {
@@ -264,7 +257,7 @@ header p {
 
 /* Logos Section */
 .logos-section {
-  background-color: var(--bg-body2);
+  background-color: var(--black-light);
 }
 
 .logos-section .container {
@@ -272,9 +265,8 @@ header p {
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   align-items: center;
-  height: auto;
-  padding: 20px 0px;
-  margin: 20px auto;
+  margin: 60px auto;
+  padding: 15px 0px;
 }
 
 .logos-section img {
@@ -284,6 +276,10 @@ header p {
 }
 
 /* Testimonial Section */
+#testimonials h2 {
+  margin-bottom: 20px;
+}
+
 .testimonials {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -292,41 +288,37 @@ header p {
 }
 
 .testimonial-card {
-  background-color: var(--bg-body2);
-  border-radius: 20px;
-  padding: 20px;
+  background-color: var(--black-light);
+  border-radius: 10px;
+  padding: 10px 20px 20px 20px;
 }
 
 .testimonial-card p {
-  color: var(--text1);
+  color: var(--white);
 }
 
 .testimonial-card i {
   font-size: 60px;
-  color: var(--text1);
+  color: var(--white);
 }
 
 .profile {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-  border-top: 1px solid var(--text1);
+  border-top: 1px solid var(--white-dark);
   margin-top: 15px;
   padding-top: 10px;
 }
 
-.profile p {
-  font-size: 18px;
-}
-
 .profile span {
-  color: var(--text2);
+  color: var(--white-dark);
   font-size: 14px;
 }
 
 /*  Footer */
 footer {
-  background-color: var(--bg-body2);
+  background-color: var(--black-light);
   padding: 50px 0 30px 0;
 }
 
@@ -340,6 +332,10 @@ form {
   position: relative;
 }
 
+.contact-info h2 {
+  margin-bottom: 15px;
+}
+
 .contact-rings-pattern {
   position: absolute;
   width: 540px;
@@ -347,10 +343,6 @@ form {
   background: url(../images/pattern-rings.svg) no-repeat center center / cover;
   bottom: -30%;
   left: -65%;
-}
-
-.contact-info h2 {
-  margin-bottom: 15px;
 }
 
 form .input-form {
@@ -369,7 +361,7 @@ form input {
   background: transparent;
   padding: 0 0 20px 10px;
   margin-bottom: 10px;
-  color: var(--text1);
+  color: var(--white);
   font-size: 17px;
   outline: none;
   border: none;
@@ -379,14 +371,14 @@ form input {
 
 form input:focus,
 form textarea:focus {
-  border-bottom-color: var(--text1);
+  border-bottom-color: var(--white);
 }
 
 form textarea {
   background: transparent;
   border: none;
   border-bottom: 2px solid rgb(113, 113, 113);
-  color: var(--text1);
+  color: var(--white);
   outline: none;
   padding-left: 10px;
   font-family: 'Manrope', sans-serif;
@@ -396,25 +388,12 @@ form textarea {
 
 form button {
   border: none;
-  background: transparent;
   margin-top: 20px;
-  color: var(--bg-body);
-  padding: 10px 25px;
-  font-weight: 600;
   font-family: 'Manrope', sans-serif;
-  font-size: 16px;
   cursor: pointer;
   position: absolute;
   right: 0px;
   bottom: -80px;
-  background-color: var(--accent);
-  border-radius: 4px;
-  transition: all 300ms ease-in-out;
-}
-
-form button:hover {
-  background-color: var(--text1);
-  color: var(--bg-body);
 }
 
 /* Footer Links */
@@ -424,13 +403,37 @@ form button:hover {
   justify-content: space-between;
   margin-top: 120px;
   padding-top: 30px;
-  border-top: 1px solid var(--text1);
+  border-top: 1px solid var(--white-dark);
+}
+
+.social-links {
+  display: flex;
+  gap: 17px;
+}
+
+.social-links i {
+  color: var(--white);
+  font-size: 30px;
+  transition: all 300ms ease-in-out;
+}
+
+.social-links i:hover {
+  color: var(--accent);
+  scale: 0.9;
 }
 
 /* Tablets */
 @media (max-width: 940px) {
   h1 {
     font-size: 50px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 30px;
   }
 
   header .container {
@@ -449,14 +452,6 @@ form button:hover {
   .skills {
     grid-template-columns: repeat(2, 1fr);
     padding-top: 35px;
-  }
-
-  .section-title h2 {
-    font-size: 46px;
-  }
-
-  .projects {
-    gap: 15px;
   }
 
   .project-img .project-links {
@@ -489,10 +484,6 @@ form button:hover {
     width: 100%;
   }
 
-  .contact-info h2 {
-    font-size: 45px;
-  }
-
   .contact-rings-pattern {
     bottom: -250%;
     left: -65%;
@@ -501,6 +492,19 @@ form button:hover {
 
 /* Smartphones */
 @media (max-width: 810px) {
+  h1 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
   nav .container {
     margin: 25px auto;
     position: relative;
@@ -511,16 +515,13 @@ form button:hover {
     top: 60px;
     translate: -50% 0;
     left: 50%;
-    list-style-type: none;
-    background-color: var(--bg-body);
+    background-color: var(--black);
     flex-direction: column;
-    justify-content: start;
     align-items: center;
-    gap: 30px;
     height: 280px;
     width: 450px;
     max-width: 90%;
-    padding-top: 30px;
+    padding-top: 45px;
     z-index: 5;
     display: none;
     border-radius: 10px;
@@ -547,6 +548,7 @@ form button:hover {
   .btn-menu.open span:nth-child(1) {
     rotate: 135deg;
   }
+
   .btn-menu.open span:nth-child(2) {
     display: none;
   }
@@ -554,23 +556,6 @@ form button:hover {
   .btn-menu.open span:nth-child(3) {
     translate: 0 -8px;
     rotate: 45deg;
-  }
-
-  .social-links i {
-    font-size: 30px;
-  }
-
-  h1 {
-    font-size: 40px;
-    margin-top: 20px;
-  }
-
-  h3 {
-    font-size: 25px;
-  }
-
-  .contact-info h2 {
-    font-size: 33px;
   }
 
   header .container {
@@ -583,6 +568,11 @@ form button:hover {
   .rings-pattern {
     left: -50%;
     top: 10%;
+  }
+
+  .circle-pattern {
+    right: -50px;
+    bottom: 30%;
   }
 
   header img {
@@ -601,11 +591,7 @@ form button:hover {
     text-align: center;
     margin-top: 40px;
     padding-bottom: 35px;
-    border-bottom: 1px solid var(--text2);
-  }
-
-  .section-title h2 {
-    font-size: 35px;
+    border-bottom: 1px solid var(--white-dark);
   }
 
   .projects {
@@ -614,7 +600,7 @@ form button:hover {
   }
 
   .tech-used {
-    height: 90px;
+    height: 80px;
   }
 
   .project-img .project-links {
@@ -643,14 +629,13 @@ form button:hover {
   }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 690px) {
   .project-img .project-links {
     top: 122%;
   }
 
   .logos-section .container {
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
     gap: 20px;
     width: 100%;
   }
@@ -683,12 +668,12 @@ form button:hover {
 
 /* Small smartphones */
 @media (max-width: 450px) {
-  .logo {
-    font-size: 25px;
+  h1 {
+    font-size: 36px;
   }
 
-  .social-links i {
-    font-size: 25px;
+  h2 {
+    font-size: 30px;
   }
 
   .project-img .project-links {
@@ -701,19 +686,10 @@ form button:hover {
 
   header p {
     margin: 10px auto 30px auto;
-    font-size: 15px;
   }
 
   header img {
-    width: 75%;
-  }
-
-  header .container {
-    gap: 0px;
-  }
-
-  .section-title h2 {
-    font-size: 30px;
+    width: 70%;
   }
 
   .contact-rings-pattern {
