@@ -258,7 +258,7 @@
     <footer>
       <div class="container">
         <section id="contact">
-          <form data-netlify="true" name="portfolio-contact" action="POST">
+          <form netlify name="portfolio-contact">
             <div class="contact-info">
               <div class="contact-rings-pattern"></div>
               <h2>Contact</h2>
@@ -270,7 +270,6 @@
             </div>
             <div class="input-form">
               <input
-                id="name"
                 type="text"
                 placeholder="Name"
                 name="name"
@@ -278,7 +277,6 @@
                 required
               />
               <input
-                id="email"
                 type="email"
                 placeholder="Email"
                 name="email"
@@ -286,15 +284,13 @@
                 required
               />
               <textarea
-                id="message"
                 name="message"
                 cols="30"
                 rows="5"
                 placeholder="Message"
                 required
-              >
-              </textarea>
-              <button type="submit" class="btn-link" value="Send Message">
+              ></textarea>
+              <button type="submit" class="btn-link">
                 Send Message
               </button>
             </div>
