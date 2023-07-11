@@ -499,6 +499,14 @@ form button {
 
 /* Smartphones */
 @media (max-width: 810px) {
+  .logo {
+    font-size: 27px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
   h1 {
     font-size: 40px;
     margin-top: 20px;
@@ -514,11 +522,12 @@ form button {
 
   nav .container {
     position: relative;
+    height: 70px;
   }
 
   nav ul {
     position: absolute;
-    top: 105px;
+    top: 75px;
     translate: -50% 0;
     left: 50%;
     background-color: var(--black);
