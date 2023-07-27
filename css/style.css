@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap');
 
 :root {
   --black: hsl(0, 0%, 8%);
@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: var(--black);
   position: relative;
   padding-top: 110px;
@@ -102,7 +102,7 @@ nav {
   background-color: var(--black);
   z-index: 10;
   top: 0px;
-  border-bottom: 2px solid var(--black-light);
+  border-bottom: 1px solid #808080cc;
 }
 
 nav .container {
@@ -262,29 +262,10 @@ header p {
   opacity: 1;
 }
 
-/* Logos Section */
-.logos-section {
-  background-color: var(--black-light);
-}
-
-.logos-section .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: space-between;
-  align-items: center;
-  margin: 60px auto;
-  padding: 15px 0px;
-}
-
-.logos-section img {
-  display: block;
-  max-width: 250px;
-  width: 100%;
-}
-
 /* Testimonial Section */
 .testimonials-section h2 {
   margin-bottom: 20px;
+  margin-top: 5rem;
 }
 
 .testimonials {
@@ -388,7 +369,7 @@ form textarea {
   color: var(--white);
   outline: none;
   padding-left: 10px;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 17px;
   resize: none;
 }
@@ -396,7 +377,7 @@ form textarea {
 form button {
   border: none;
   margin-top: 20px;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Nunito", sans-serif;
   cursor: pointer;
   position: absolute;
   right: 0px;
@@ -622,10 +603,6 @@ form button {
     top: 118%;
   }
 
-  .logos-section .container {
-    padding: 20px;
-  }
-
   .testimonials {
     grid-template-columns: 1fr;
   }
@@ -647,12 +624,6 @@ form button {
 @media (max-width: 690px) {
   .project-img .project-links {
     top: 122%;
-  }
-
-  .logos-section .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 100%;
   }
 
   .rings-pattern {
