@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RM5BP3G793"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RM5BP3G793');
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +41,6 @@
       <div class="container">
         <p class="logo">jarycruz</p>
         <ul data-menu>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact" class="btn-link">Contact Me</a></li>
@@ -50,48 +58,33 @@
     <header>
       <div class="container">
         <img src="images/jary.jpeg" alt="Jary Cruz" />
-        <div class="rings-pattern"></div>
-        <div class="circle-pattern"></div>
         <div>
           <h1><span>Professional</span> Web Developer</h1>
           <p>
             Generate more leads with the power of a modern website.
           </p>
           <a href="#contact" class="btn-link" id="skills">Contact Me</a>
+          <div class="tech-stack">
+            <h5>Tech Stack</h5>
+            <div class="tech-logos">
+              <img src="images/html.svg" alt="">
+              <img src="images/css.svg" alt="">
+              <img src="images/bootstrap.svg" alt="">
+              <img src="images/sass.svg" alt="">
+              <img src="images/javascript.svg" alt="">
+              <img src="images/react.png" alt="">
+              <img src="images/typescript.png" alt="">
+            </div>
+          </div>
         </div>
+        <div class="rings-pattern"></div>
       </div>
     </header>
 
     <!-- Main Content -->
     <main>
-      <!-- Skills Section -->
-      <section>
-        <div class="container">
-          <div class="skills">
-            <div>
-              <h3>HTML</h3>
-            </div>
-            <div>
-              <h3>CSS</h3>
-            </div>
-            <div>
-              <h3>JavaScript</h3>
-            </div>
-            <div>
-              <h3>React</h3>
-            </div>
-            <div>
-              <h3>TypeScript</h3>
-            </div>
-            <div>
-              <h3 id="projects">Bootstrap</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Projects Section -->
-      <section>
+      <section id="projects">
         <div class="container">
           <div class="section-title">
             <h2>Projects</h2>
@@ -204,7 +197,7 @@
       </section>
 
       <!-- Testimonial Section -->
-      <section class="testimonials-section">
+      <section class="testimonials-section" id="testimonials">
         <div class="container">
           <h2>Testimonials</h2>
           <div class="testimonials">
