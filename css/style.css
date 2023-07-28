@@ -166,17 +166,9 @@ header .container {
 
 header img {
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 450px;
   width: 45%;
   object-fit: contain;
-}
-
-.rings-pattern {
-  position: absolute;
-  width: 540px;
-  height: 130px;
-  background: url(../images/pattern-rings.svg) no-repeat center center / cover;
-  left: -27%;
 }
 
 header p {
@@ -210,70 +202,97 @@ header p {
   width: 50px;
 }
 
-/* Projects Section */
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0px;
+/* Services Section */
+#services {
+  padding-top: 100px;
 }
 
-#projects {
-  padding-top: 80px;
-}
-
-.projects {
+.services-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  width: 100%;
+  gap: 50px;
+  margin-top: 50px;
 }
 
-.project {
+.service-card {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex: 1;
+}
+
+.service-card i {
+  color: var(--white);
+  margin-top: 8px;
+}
+
+.service-card p span {
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* Projects Section */
+#projects {
+  padding-top: 100px;
+}
+
+#projects h2 {
+  text-align: center;
   margin-bottom: 20px;
-  position: relative;
 }
 
-.project h3 {
-  font-size: 22px;
-}
-
-.project-img {
-  width: 100%;
-  position: relative;
-  cursor: pointer;
-}
-
-.project-img:hover img {
-  filter: brightness(25%);
-}
-
-.project-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-
-.project-img .project-links {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  left: 50%;
-  translate: -50% -50%;
+.projects-container {
   display: flex;
   flex-direction: column;
-  text-align: center;
   gap: 20px;
-  width: 35%;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s;
 }
 
-.project-img:hover .project-links {
-  visibility: visible;
-  opacity: 1;
+.project-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-light);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.project-info {
+  text-align: center;
+}
+
+.project-info > p {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.project-card img {
+  width: 50%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-group div {
+  color: var(--white-dark);
+  border: 2px solid var(--white-dark);
+  padding: 3px 15px;
+  border-radius: 10px;
+}
+
+.card-group a {
+  font-size: 18px;
+  color: var(--white);
+}
+
+.card-group a:hover {
+  color: var(--accent);
 }
 
 /* Testimonial Section */
@@ -283,19 +302,23 @@ header p {
 
 .testimonials-section h2 {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .testimonials {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
   margin-bottom: 70px;
 }
 
 .testimonial-card {
   background-color: var(--black-light);
   border-radius: 10px;
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 20px;
+  max-width: 370px;
 }
 
 .testimonial-card p {
@@ -334,20 +357,27 @@ form {
 
 .contact-info {
   width: 100%;
-  position: relative;
 }
 
-.contact-info h2 {
-  margin-bottom: 15px;
+.contact-info div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
 }
 
-.contact-rings-pattern {
-  position: absolute;
-  width: 540px;
-  height: 130px;
-  background: url(../images/pattern-rings.svg) no-repeat center center / cover;
-  bottom: -30%;
-  left: -65%;
+.contact-info p {
+  max-width: fit-content;
+}
+
+.contact-info p:has(i) {
+  color: var(--white);
+}
+
+.contact-info p i {
+  color: var(--white);
+  margin-right: 5px;
 }
 
 form .input-form {
@@ -427,19 +457,18 @@ form button {
   scale: 0.9;
 }
 
-/* Tablets */
 @media (max-width: 955px) {
   body {
     padding-top: 80px;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 45px;
     margin-top: 20px;
   }
 
   h2 {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   h3 {
@@ -457,7 +486,7 @@ form button {
 
   nav ul {
     position: absolute;
-    top: 75px;
+    top: 70px;
     translate: -50% 0;
     left: 50%;
     background-color: var(--black);
@@ -470,7 +499,7 @@ form button {
     z-index: 5;
     display: none;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    border: 1px solid var(--white-dark);
   }
 
   nav ul.shown {
@@ -510,11 +539,6 @@ form button {
     margin: 20px auto;
   }
 
-  .rings-pattern {
-    left: -50%;
-    top: 10%;
-  }
-
   header .container > img {
     display: block;
     margin: 0 auto;
@@ -547,40 +571,35 @@ form button {
     justify-content: center;
   }
 
-  .project-img .project-links {
-    translate: none;
-    top: 133%;
-    left: 0;
-    visibility: visible;
-    opacity: 1;
-    flex-direction: row;
+  .services-container {
+    gap: 20px;
+  }
+
+  .projects-container .project-card:nth-child(2),
+  .projects-container .project-card:last-child {
+    flex-direction: column-reverse;
+  }
+
+  .project-card {
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .project-card img {
     width: 100%;
   }
 
-  #projects {
-    padding-top: 90px;
-  }
-
-  .tech-used {
-    height: 70px;
-  }
-
-  .project-img:hover img {
-    filter: brightness(100%);
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-    padding-bottom: 0px;
-  }
-
-  .tech-used {
-    height: 80px;
+  .contact-info div {
+    justify-content: center;
   }
 
   form {
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
     gap: 40px;
@@ -589,69 +608,21 @@ form button {
   form p {
     width: 100%;
   }
-
-  .contact-rings-pattern {
-    bottom: -250%;
-    left: -65%;
-  }
 }
 
-/* Smartphones */
-@media (max-width: 810px) {
-  .tech-used {
-    height: 80px;
-  }
-
-  .project-img .project-links {
-    top: 118%;
-  }
-
+@media (max-width: 570px) {
   .testimonials {
-    grid-template-columns: 1fr;
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 
   .testimonial-card {
     width: 100%;
+    max-width: 100%;
   }
 
-  form {
-    width: 100%;
-  }
-
-  .contact-rings-pattern {
-    bottom: -300%;
-    left: -50%;
-  }
-}
-
-@media (max-width: 690px) {
-  .project-img .project-links {
-    top: 122%;
-  }
-
-  .rings-pattern {
-    left: -60%;
-  }
-
-  .contact-rings-pattern {
-    left: -60%;
-  }
-}
-
-@media (max-width: 570px) {
-  .project-img .project-links {
-    top: 130%;
-  }
-
-  .rings-pattern {
-    left: -75%;
-    top: 5%;
-    z-index: -10;
-  }
-
-  .contact-rings-pattern {
-    bottom: -240%;
-    left: -70%;
+  .services-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -665,14 +636,6 @@ form button {
     font-size: 33px;
   }
 
-  .project-img .project-links {
-    top: 135%;
-  }
-
-  .project-links a {
-    padding: 8px 10px;
-  }
-
   header p {
     margin: 10px auto 30px auto;
   }
@@ -681,8 +644,12 @@ form button {
     width: 70%;
   }
 
-  .contact-rings-pattern {
-    bottom: -210%;
-    left: -120%;
+  .project-info > p {
+    width: 100%;
+  }
+
+  .contact-info div {
+    flex-direction: column;
+    gap: 10px;
   }
 }
