@@ -5,7 +5,8 @@
   --black-light: hsl(0, 0%, 14%);
   --accent: hsl(180, 66%, 49%);
   --white: hsl(0, 0%, 100%);
-  --white-dark: hsl(0, 0%, 75%);
+  --white-dark: hsl(0, 0%, 70%);
+  --some-color: rgb(209, 213, 219);
 }
 
 *,
@@ -27,7 +28,7 @@ h1 {
   font-size: 60px;
   color: var(--white);
   margin-top: 70px;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 h1 span {
@@ -36,7 +37,7 @@ h1 span {
 
 h2 {
   color: var(--white);
-  font-size: 50px;
+  font-size: 45px;
   margin-bottom: 5px;
 }
 
@@ -204,20 +205,23 @@ header p {
 
 /* Services Section */
 #services {
-  padding-top: 100px;
+  padding-top: 130px;
+}
+
+#services h2 {
+  text-align: center;
 }
 
 .services-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .service-card {
   display: flex;
   gap: 20px;
-  margin-bottom: 30px;
   flex: 1;
 }
 
@@ -233,12 +237,12 @@ header p {
 
 /* Projects Section */
 #projects {
-  padding-top: 100px;
+  padding-top: 130px;
 }
 
 #projects h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .projects-container {
@@ -297,11 +301,11 @@ header p {
 
 /* Testimonial Section */
 #testimonials {
-  padding-top: 90px;
+  padding-top: 130px;
 }
 
 .testimonials-section h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -558,7 +562,7 @@ form button {
     flex-direction: column;
     gap: 25px;
   }
-  
+
   .tech-stack h5 {
     border-right: none;
     border-bottom: 3px solid var(--white);
@@ -572,7 +576,7 @@ form button {
   }
 
   .services-container {
-    gap: 20px;
+    gap: 30px;
   }
 
   .projects-container .project-card:nth-child(2),
@@ -607,6 +611,12 @@ form button {
 
   form p {
     width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .services-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -646,6 +656,14 @@ form button {
 
   .project-info > p {
     width: 100%;
+  }
+
+  .card-group {
+    gap: 12px;
+  }
+
+  .card-group a {
+    font-size: 15px;
   }
 
   .contact-info div {
