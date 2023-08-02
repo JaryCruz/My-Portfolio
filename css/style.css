@@ -66,6 +66,12 @@ a {
   letter-spacing: 1px;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 /* Utility Classes */
 .container {
   max-width: 1200px;
@@ -103,7 +109,7 @@ nav {
   background-color: var(--black);
   z-index: 10;
   top: 0px;
-  border-bottom: 1px solid #808080cc;
+  border-bottom: 1px solid hsl(0, 0%, 50%);
 }
 
 nav .container {
@@ -114,26 +120,17 @@ nav .container {
 }
 
 .btn-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 30px;
-  height: 40px;
   background-color: transparent;
-  border: none;
-  cursor: pointer;
   display: none;
+}
+
+.btn-menu i {
+  color: var(--white);
 }
 
 .btn-menu:hover {
   opacity: 0.9;
   scale: 0.99;
-}
-
-.btn-menu span {
-  width: 100%;
-  height: 3px;
-  background-color: var(--white);
 }
 
 nav ul {
@@ -213,26 +210,27 @@ header p {
 }
 
 .services-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.9rem;
+  margin-top: 3rem;
 }
 
 .service-card {
-  display: flex;
-  gap: 20px;
   flex: 1;
+  max-width: 370px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin: .9rem 0;
 }
 
 .service-card i {
   color: var(--white);
-  margin-top: 8px;
-}
-
-.service-card p span {
-  color: var(--white);
-  font-weight: bold;
+  font-size: 2.2rem;
 }
 
 /* Projects Section */
@@ -490,20 +488,19 @@ form button {
 
   nav ul {
     position: absolute;
-    top: 70px;
+    top: 4.3rem;
     translate: -50% 0;
     left: 50%;
     background-color: var(--black);
     flex-direction: column;
-    align-items: center;
-    height: 280px;
-    width: 450px;
-    max-width: 90%;
-    padding-top: 45px;
+    align-items: flex-start;
+    height: 15rem;
+    width: 100dvw;
+    padding-top: .8rem;
+    padding-left: 1.5rem;
     z-index: 5;
     display: none;
-    border-radius: 10px;
-    border: 1px solid var(--white-dark);
+    border-bottom: 1px solid hsl(0, 0%, 50%);
   }
 
   nav ul.shown {
@@ -514,26 +511,8 @@ form button {
     display: block;
   }
 
-  .btn-menu {
-    display: flex;
-    justify-content: center;
-  }
-
-  .btn-menu.open {
-    translate: 0 3px;
-  }
-
-  .btn-menu.open span:nth-child(1) {
-    rotate: 135deg;
-  }
-
-  .btn-menu.open span:nth-child(2) {
-    display: none;
-  }
-
-  .btn-menu.open span:nth-child(3) {
-    translate: 0 -8px;
-    rotate: 45deg;
+  .btn-menu { 
+    display: block;
   }
 
   header .container {
@@ -576,7 +555,19 @@ form button {
   }
 
   .services-container {
-    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .service-card h3 {
+    font-size: 1.3rem;
   }
 
   .projects-container .project-card:nth-child(2),
@@ -590,6 +581,10 @@ form button {
     max-width: 600px;
     margin: 0 auto;
     gap: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
   }
 
   .project-card img {
@@ -614,12 +609,6 @@ form button {
   }
 }
 
-@media (max-width: 850px) {
-  .services-container {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 570px) {
   .testimonials {
     flex-wrap: nowrap;
@@ -629,10 +618,6 @@ form button {
   .testimonial-card {
     width: 100%;
     max-width: 100%;
-  }
-
-  .services-container {
-    grid-template-columns: 1fr;
   }
 }
 
