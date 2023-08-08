@@ -269,7 +269,7 @@
   <footer id="contact">
     <div class="container">
       <section>
-        <form netlify name="portfolio-contact">
+        <form name="portfolio-contact" method="POST" netlify>
           <div class="contact-info">
             <h2>Contact</h2>
             <p>
@@ -286,12 +286,10 @@
             </div>
           </div>
           <div class="input-form">
-            <input type="text" placeholder="Name" name="name" autocomplete="off" required />
-            <input type="email" placeholder="Email" name="email" autocomplete="off" required />
+            <input type="text" placeholder="Name" name="name" required />
+            <input type="email" placeholder="Email" name="email" required />
             <textarea name="message" cols="30" rows="5" placeholder="Message" required></textarea>
-            <button type="submit" class="btn-link">
-              Hire Me
-            </button>
+            <button type="submit" class="btn-link">Contact Me</button>
           </div>
         </form>
       </section>
