@@ -16,7 +16,7 @@
 body.dark {
   --black: hsl(0, 0%, 4%);
   --black-light: hsl(0, 0%, 10%);
-  --dark-border: hsl(0, 0%, 25%);;
+  --dark-border: hsl(0, 0%, 25%);
   --white: hsl(0, 0%, 100%);
   --white-light: hsl(0, 0%, 93%);
   --white-dark: hsl(0, 0%, 70%);
@@ -24,7 +24,8 @@ body.dark {
 
 body.light {
   --black: hsl(0, 0%, 100%);
-  --black-light: hsl(0, 0%, 94%);
+  --black-light: hsl(0, 0%, 98%);
+  --dark-border: hsl(0, 0%, 80%);
   --white: hsl(0, 0%, 8%);
   --white-dark: hsl(0, 0%, 50%);
 }
@@ -113,7 +114,7 @@ nav {
   background-color: var(--black);
   z-index: 10;
   top: 0px;
-  border-bottom: 1px solid hsl(0, 0%, 30%);
+  border-bottom: 1px solid var(--dark-border);
 }
 
 nav .container {
