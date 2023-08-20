@@ -293,9 +293,8 @@ header p {
   text-align: center;
 }
 
-.project-info > p {
+.project-info p {
   width: 80%;
-  text-align: center;
   margin: 1rem auto;
 }
 
@@ -321,7 +320,7 @@ header p {
 }
 
 .card-group a {
-  font-size: 1rem;
+  font-size: .9rem;
   color: var(--white);
 }
 
@@ -493,18 +492,18 @@ form button {
 
 .social-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.9rem;
 }
 
 .social-links i {
   color: var(--white);
   font-size: 1.8rem;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms ease-out;
 }
 
 .social-links i:hover {
   color: var(--white-dark);
-  scale: 0.9;
+  scale: 0.98;
 }
 
 @media (max-width: 955px) {
