@@ -299,7 +299,7 @@ header p {
 }
 
 .project-card img {
-  min-width: 550px;
+  width: 550px;
   border-radius: 10px;
   object-fit: cover;
 }
