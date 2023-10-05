@@ -285,20 +285,19 @@ header p {
   object-fit: cover;
 }
 
-.card-group {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.card-group a {
+.project-card a {
   font-size: 1rem;
+  border: 1px solid var(--dark-border);
+  padding: 0.6rem 1rem;
+  display: block;
+  max-width: 130px;
+  border-radius: 0.5rem;
+  margin: 1rem auto 0;
   color: var(--white);
 }
 
-.card-group a:hover {
-  color: var(--white-dark);
+.project-card a:hover {
+  opacity: 0.7;
 }
 
 /* Testimonial Section */
@@ -646,14 +645,6 @@ form button {
 
   .testimonial-card p {
     font-size: 0.8rem;
-  }
-
-  .card-group {
-    gap: 12px;
-  }
-
-  .card-group a {
-    font-size: 15px;
   }
 
   .contact-info div {
