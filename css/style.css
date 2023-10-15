@@ -290,7 +290,7 @@ header p {
   border: 1px solid var(--dark-border);
   padding: 0.6rem 1rem;
   display: block;
-  max-width: 130px;
+  width: 140px;
   border-radius: 0.5rem;
   margin: 1rem auto 0;
   color: var(--white);
