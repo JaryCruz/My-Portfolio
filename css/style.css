@@ -250,22 +250,22 @@ header p {
   font-size: 1rem;
 }
 
-/* Services Section */
-#services {
+/* strategy Section */
+#strategy {
   padding-top: 130px;
 }
 
-#services .btn-link {
+#strategy .btn-link {
   display: block;
   margin: 1.5rem auto 0;
   width: fit-content;
 }
 
-#services h2 {
+#strategy h2 {
   text-align: center;
 }
 
-.services-container {
+.strategy-container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -273,19 +273,19 @@ header p {
   gap: 1rem;
 }
 
-.service-card {
+.strategy-card {
   flex: 1;
   padding: 1.5rem;
   border: 1px solid var(--dark-border);
   border-radius: var(--border-radius);
 }
 
-.service-card h3 {
+.strategy-card h3 {
   margin: 0.9rem 0;
   font-size: 1.4rem;
 }
 
-.service-card i {
+.strategy-card i {
   color: var(--white);
   font-size: 1.5rem;
 }
@@ -611,7 +611,7 @@ form button {
     margin: 20px auto 40px auto;
   }
 
-  .services-container {
+  .strategy-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -622,7 +622,7 @@ form button {
     flex-direction: column;
   }
 
-  .service-card {
+  .strategy-card {
     width: 100%;
     max-width: 600px;
   }
@@ -687,10 +687,6 @@ form button {
 @media (max-width: 450px) {
   h1 {
     font-size: 2.3rem;
-  }
-
-  .heading {
-    font-size: 2rem;
   }
 
   .contact-info h2 {
