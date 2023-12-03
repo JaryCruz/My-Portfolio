@@ -497,19 +497,6 @@ form .input-form {
   position: relative;
 }
 
-.input-form span {
-  color: red;
-  position: absolute;
-  top: 57px;
-  left: 5px;
-  font-size: 0.8rem;
-  display: none;
-}
-
-.input-form span.shown {
-  display: block;
-}
-
 form p {
   font-size: 1rem;
   width: 80%;
@@ -517,7 +504,7 @@ form p {
 
 form input {
   padding: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: var(--white);
   font-size: 1rem;
   outline: none;
