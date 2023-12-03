@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
 
 *,
 *::before,
@@ -36,7 +36,7 @@ body.body-container {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 50px;
   color: var(--white-light);
   margin-top: 70px;
   line-height: 1.4;
@@ -497,6 +497,19 @@ form .input-form {
   position: relative;
 }
 
+.input-form span {
+  color: red;
+  position: absolute;
+  top: 57px;
+  left: 5px;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.input-form span.shown {
+  display: block;
+}
+
 form p {
   font-size: 1rem;
   width: 80%;
@@ -504,7 +517,7 @@ form p {
 
 form input {
   padding: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: var(--white);
   font-size: 1rem;
   outline: none;
