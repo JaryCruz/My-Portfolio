@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap:https://jarycruz.com/sitemap.xml
