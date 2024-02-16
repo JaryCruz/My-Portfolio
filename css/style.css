@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
 
 *,
 *::before,
@@ -19,7 +19,7 @@
 
 /* General Styles */
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: var(--black);
   position: relative;
   padding-top: 80px;
@@ -392,7 +392,9 @@ header p {
 }
 
 .testimonials {
-  display: flex;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: stretch;
 }
@@ -402,21 +404,10 @@ header p {
   padding: 1.3rem;
   border: 1px solid var(--dark-border);
   display: flex;
+  border-radius: var(--border-radius);
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-}
-
-.testimonial-card:first-child {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  border-right: none;
-}
-
-.testimonial-card:last-child {
-  border-left: none;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
 }
 
 .testimonial-card p {
@@ -496,6 +487,13 @@ footer p {
 
 .footer-links img {
   width: 35px;
+}
+
+.x-link {
+  font-size: 2.5rem;
+  margin: 0 !important;
+  translate: 0 -5px;
+  color: #ccc;
 }
 
 @media (max-width: 1030px) {
@@ -615,22 +613,7 @@ footer p {
 
 @media (max-width: 700px) {
   .testimonials {
-    flex-direction: column;
-  }
-
-  .testimonial-card:first-child {
-    border-right: 1px solid var(--dark-border);
-    border-top-right-radius: 12px;
-    border-bottom-left-radius: 0;
-    border-bottom: none;
-  }
-
-  .testimonial-card:last-child {
-    border-left: 1px solid var(--dark-border);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    border-top-right-radius: 0;
-    border-top: none;
+    grid-template-columns: 1fr;
   }
 
   h2 {
